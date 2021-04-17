@@ -1,4 +1,4 @@
-library inner_drawer_and_internet;
+library inner_drawer;
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
