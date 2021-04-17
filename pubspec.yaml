@@ -12,9 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_inner_drawer: ^1.0.0+1
-  flutter_bloc: ^7.0.0
-  bloc: ^7.0.0
-  connectivity_plus: ^1.0.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
