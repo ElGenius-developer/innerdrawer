@@ -6,9 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_drawer/inner_drawer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-part 'internet_cubit.dart';
-part 'internet_state.dart';
-part 'internet_widget.dart';
+
 
 
 class InnerCustomDrawer extends StatelessWidget {
