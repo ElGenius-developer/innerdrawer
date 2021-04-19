@@ -18,6 +18,7 @@ class InnerCustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InnerDrawer(
+
       key: innerDrawerKey,
       borderRadius: 28,
       offset: IDOffset.only(
@@ -27,11 +28,20 @@ class InnerCustomDrawer extends StatelessWidget {
       leftAnimationType: InnerDrawerAnimation.quadratic,
       rightAnimationType: InnerDrawerAnimation.quadratic,
       backgroundDecoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
+
+        color: Colors.deepPurple
+        // color: Theme.of(context).scaffoldBackgroundColor,
       ),
+      swipe: false,
+      swipeChild: false,
+      proportionalChildArea: false,
       scaffold: mainScreen,
-      leftChild: !isRight ? drawerContent : null,
-      rightChild: isRight ? drawerContent: null,
+      rightChild: null,
+      tapScaffoldEnabled: false,
+
+      // leftChild: drawerContent,
+      leftChild: drawerContent,
+      // rightChild:  drawerContent,
     );
   }
 }
