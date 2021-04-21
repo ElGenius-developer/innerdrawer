@@ -35,11 +35,11 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       automaticallyImplyLeading: false,
       leading: IconButton(
         icon: showDrawer
-            ? SvgPicture.asset(
-                'assets/icons/drawer.svg',
-                color: textColor,
-                fit: BoxFit.scaleDown,
-              )
+            ? Icon(
+          Icons.menu,
+          color: textColor,
+          size: 35,
+        )
             : Icon(
                 Icons.arrow_back_ios_rounded,
                 color: textColor,
