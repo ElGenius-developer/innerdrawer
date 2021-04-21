@@ -36,8 +36,8 @@ class InnerCustomDrawer extends StatelessWidget {
         color: Theme.of(context).scaffoldBackgroundColor,
       ),
       scaffold: mainScreen,
-      leftChild: !isRight ? DrawerBodyContent() : null,
-      rightChild: isRight ? DrawerBodyContent() : null,
+      leftChild: !isRight ? drawerContent() : null,
+      rightChild: isRight ? drawerContent() : null,
     );
   }
 }
