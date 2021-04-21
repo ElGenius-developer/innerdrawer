@@ -27,7 +27,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         : Colors.black);*/
     return AppBar(
      brightness:MediaQuery.of(context).platformBrightness== Brightness.dark?
-      Brightness.light:Brightness.dark,
+     Brightness.dark: Brightness.light,
       titleTextStyle: TextStyle(
         fontFamily: 'Akaya',
         fontSize: 32,
