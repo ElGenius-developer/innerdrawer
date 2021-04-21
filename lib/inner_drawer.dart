@@ -32,9 +32,8 @@ class InnerCustomDrawer extends StatelessWidget {
       onTapClose: true,
       leftAnimationType: InnerDrawerAnimation.quadratic,
       rightAnimationType: InnerDrawerAnimation.quadratic,
-      backgroundDecoration: BoxDecoration(color: Colors.deepPurple
-          // color: Theme.of(context).scaffoldBackgroundColor,
-          ),
+      backgroundDecoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
+
       swipe: false,
       swipeChild: false,
       proportionalChildArea: false,
