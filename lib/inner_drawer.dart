@@ -32,18 +32,12 @@ class InnerCustomDrawer extends StatelessWidget {
       onTapClose: true,
       leftAnimationType: InnerDrawerAnimation.quadratic,
       rightAnimationType: InnerDrawerAnimation.quadratic,
-      backgroundDecoration: BoxDecoration(color: Theme.of(context).scaffoldBackgroundColor),
-
-      swipe: false,
-      swipeChild: false,
-      proportionalChildArea: false,
+      backgroundDecoration: BoxDecoration(
+        color: Theme.of(context).scaffoldBackgroundColor,
+      ),
       scaffold: mainScreen,
-      rightChild: null,
-      tapScaffoldEnabled: false,
-
-      // leftChild: drawerContent,
-      leftChild: drawerContent,
-      // rightChild:  drawerContent,
+      leftChild: !isRight ? DrawerBodyContent() : null,
+      rightChild: isRight ? DrawerBodyContent() : null,
     );
   }
 }
