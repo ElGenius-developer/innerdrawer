@@ -21,7 +21,6 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textColor = Colors.black;
     /*his.textColor??(context.watch<ThemeCubit>().isDarkThemEnabled
         ? Colors.white
         : Colors.black);*/
@@ -39,12 +38,12 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: showDrawer
             ? Icon(
           Icons.menu,
-          color: textColor,
+          color: textColor ?? Colors.white,
           size: 35,
         )
             : Icon(
                 Icons.arrow_back_ios_rounded,
-                color: textColor,
+                color: textColor ?? Colors.white,
                 size: 35,
               ),
         onPressed: () => showDrawer
