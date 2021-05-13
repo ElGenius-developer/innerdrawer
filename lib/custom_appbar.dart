@@ -31,7 +31,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         fontFamily: 'Akaya',
         fontSize: 32,
       ),
-      systemOverlayStyle: Theme.of(context).appBarTheme.systemOverlayStyle,
+     // systemOverlayStyle: Theme.of(context).appBarTheme.systemOverlayStyle,
       elevation: 0,
       automaticallyImplyLeading: false,
       leading: IconButton(
