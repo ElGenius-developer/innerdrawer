@@ -38,12 +38,12 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: showDrawer
             ? Icon(
           Icons.menu,
-          color: textColor ?? Colors.white,
+          color: textColor ?? Colors.indigo.shade300,
           size: 35,
         )
             : Icon(
                 Icons.arrow_back_ios_rounded,
-                color: textColor ?? Colors.white,
+                color: textColor ?? Colors.indigo.shade300,
                 size: 35,
               ),
         onPressed: () => showDrawer
@@ -54,12 +54,12 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           (showTrailing
               ? [
                   IconButton(
-                    icon: Icon(Icons.search, color: textColor, size: 35),
+                    icon: Icon(Icons.search, color: textColor ?? Colors.indigo.shade300, size: 35),
                     onPressed: () {},
                   ),
                 ]
               : []),
-      backgroundColor: color ?? Colors.deepPurple,
+      backgroundColor: color ?? Colors.indigo,
       // context.read<ThemeCubit>().defaultColor,
       title: Text(
         title,
@@ -67,7 +67,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           fontSize: 25,
           fontWeight: FontWeight.bold,
           fontFamily: 'Akaya',
-          color: textColor ?? Colors.white,
+          color: textColor ??  Colors.indigo.shade300,
         ),
       ),
 
