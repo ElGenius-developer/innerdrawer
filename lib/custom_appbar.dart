@@ -59,7 +59,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 ]
               : []),
-      backgroundColor: color ?? Colors.indigo,
+      backgroundColor: color ?? Theme.of(context).scaffoldBackgroundColor,
       // context.read<ThemeCubit>().defaultColor,
       title: Text(
         title,
