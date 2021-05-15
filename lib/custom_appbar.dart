@@ -5,12 +5,14 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color color;
   final Color textColor;
   final bool showDrawer;
+  final Widget leadingWidget; 
   final List<Widget> actions;
   final String title;
   final bool showTrailing;
   const MyCustomAppBar({
     Key key,
     this.size,
+   this.leadingWidget,
     this.showDrawer = false,
     this.showTrailing = false,
     @required this.title,
@@ -34,7 +36,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
      // systemOverlayStyle: Theme.of(context).appBarTheme.systemOverlayStyle,
       elevation: 0,
       automaticallyImplyLeading: false,
-      leading: IconButton(
+      leading: leadingWidget ?? IconButton(
         icon: showDrawer
             ? Icon(
           Icons.menu,
