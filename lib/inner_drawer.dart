@@ -11,7 +11,7 @@ class InnerCustomDrawer extends StatelessWidget {
   final bool isRight;
   final Widget mainScreen;
   final Widget drawerContent;
-  final GlobalKey<InnerDrawerState> innerDrawerKey;
+  static final GlobalKey<InnerDrawerState> innerDrawerKey;
 
   const InnerCustomDrawer(
       {Key key,
