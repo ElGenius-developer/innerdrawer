@@ -11,13 +11,13 @@ class InnerCustomDrawer extends StatelessWidget {
   final bool isRight;
   final Widget mainScreen;
   final Widget drawerContent;
-  static GlobalKey<InnerDrawerState> innerDrawerKey =
-      GlobalKey<InnerDrawerState>();
+  final GlobalKey<InnerDrawerState> innerDrawerKey;
 
   const InnerCustomDrawer(
       {Key key,
       this.isRight = false,
       @required this.mainScreen,
+      @required this.innerDrawerKey,
       this.drawerContent})
       : super(key: key);
 
