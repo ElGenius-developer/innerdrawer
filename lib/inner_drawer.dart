@@ -2,8 +2,9 @@ library inner_drawer;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inner_drawer/inner_drawer.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_zoom_drawer/config.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 part 'custom_appbar.dart';
 
@@ -36,7 +37,7 @@ class InnerCustomDrawer extends StatelessWidget {
         isRtl: isRight!,
         mainScreenTapClose: true,
         openCurve: Curves.fastOutSlowIn,
-        menuScreenWidth:MediaQuery.of(context).size.width*.25,
+        menuScreenWidth: MediaQuery.of(context).size.width * .25,
         overlayBlend: BlendMode.colorDodge,
         duration: const Duration(milliseconds: 200),
         angle: 0,
