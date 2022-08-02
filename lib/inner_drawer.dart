@@ -8,36 +8,42 @@ import 'package:flutter_svg/flutter_svg.dart';
 part 'custom_appbar.dart';
 
 class InnerCustomDrawer extends StatelessWidget {
-  final bool isRight;
+  final bool? isRight;
+  final Color menuBackgroundColor;
   final Widget mainScreen;
   final Widget drawerContent;
-    final GlobalKey<InnerDrawerState> innerDrawerKey;
+  final ZoomDrawerController controller;
 
-  const InnerCustomDrawer(
-      {Key key,
-      this.isRight = false,
-      @required this.mainScreen,
-      @required this.innerDrawerKey,
-      this.drawerContent})
-      : super(key: key);
+  const InnerCustomDrawer({
+    Key? key,
+    required this.menuBackgroundColor,
+    required this.drawerContent,
+    required this.mainScreen,
+    required this.controller,
+    this.isRight = false,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return InnerDrawer(
-      key: innerDrawerKey,
-      borderRadius: 28,
-      offset: IDOffset.only(
-        bottom: 0.1,
-      ),
-      onTapClose: true,
-      leftAnimationType: InnerDrawerAnimation.quadratic,
-      rightAnimationType: InnerDrawerAnimation.quadratic,
-      backgroundDecoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
-      ),
-      scaffold: mainScreen,
-      leftChild: !isRight ? drawerContent : null,
-      rightChild: isRight ? drawerContent : null,
-    );
+    return ResponsiveBuilder(builder: (context, deviceInfo) {
+      return ZoomDrawer(
+        mainScreenScale: .15,
+        controller: controller,
+        borderRadius: 24,
+        disableDragGesture: true,
+        moveMenuScreen: true,
+        closeCurve: Curves.easeOutQuint,
+        isRtl: isRight!,
+        mainScreenTapClose: true,
+        openCurve: Curves.fastOutSlowIn,
+        menuScreenWidth:MediaQuery.of(context).size.width*.25,
+        overlayBlend: BlendMode.colorDodge,
+        duration: const Duration(milliseconds: 200),
+        angle: 0,
+        mainScreen: mainScreen,
+        menuScreen: drawerContent,
+        menuBackgroundColor: menuBackgroundColor,
+      );
+    });
   }
 }
